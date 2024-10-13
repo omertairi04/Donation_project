@@ -1,0 +1,25 @@
+@page
+@model D_Project.Pages.UserModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Hello</title>
+</head>
+<body>
+<div>
+    <h1>Welcome to your account</h1>
+    <div>
+        First Name: @Model.app_user?.FirstName
+    </div>
+    <div>
+        Created At: @Model.app_user?.CreatedAt.ToString("MM/dd/yyyy")
+    </div>
+    </div>
+</body>
+</html>

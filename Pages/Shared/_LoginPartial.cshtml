@@ -1,0 +1,38 @@
+@using Microsoft.AspNetCore.Identity
+@using D_Project.Models
+
+@inject SignInManager<AppUser> SignInManager
+@inject UserManager<AppUser> UserManager
+
+<ul class="navbar-nav">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        if (User.IsInRole("Admin"))
+        {
+            <li class="nav-item">
+                <a class="nav-link" href="/Admin">Admin Dashboard</a>
+            </li>
+        }
+        else if (User.IsInRole("Client"))
+        {
+            <li class="nav-item">
+                <a class="nav-link" href="/Client">Client Dashboard</a>
+            </li>
+        }
+        else if (User.IsInRole("Donator"))
+        {
+            <li class="nav-item">
+                <a class="nav-link" href="/Donator">Donator Dashboard</a>
+            </li>
+        }
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
+        </li>
+    }
+</ul>
