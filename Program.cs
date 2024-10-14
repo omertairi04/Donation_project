@@ -15,7 +15,6 @@ builder.Services.AddDefaultIdentity<AppUser>(options => options.SignIn.RequireCo
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

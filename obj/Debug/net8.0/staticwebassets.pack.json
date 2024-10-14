@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/home/omer/RiderProjects/D_Project/D_Project/wwwroot/images/mainCategories/category.jpg",
+      "PackagePath": "staticwebassets/images/mainCategories/category.jpg"
+    },
+    {
       "Id": "/home/omer/RiderProjects/D_Project/D_Project/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },
