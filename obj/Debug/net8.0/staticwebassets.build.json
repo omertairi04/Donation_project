@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7cZBB2C3KyzMIcKf2KBLcDxPonZkJHb+WLU3fQTRXSo=",
+  "Hash": "6wo88ndcyvQ36Me08fre4zZFGm/pRyqr5EVspOXN8Lk=",
   "Source": "D_Project",
   "BasePath": "_content/D_Project",
   "Mode": "Default",
@@ -1231,6 +1231,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/home/omer/RiderProjects/D_Project/D_Project/wwwroot/images/mainCategories/category.jpg",
+      "SourceId": "D_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/omer/RiderProjects/D_Project/D_Project/wwwroot/",
+      "BasePath": "_content/D_Project",
+      "RelativePath": "images/mainCategories/category.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/mainCategories/category.jpg"
     },
     {
       "Identity": "/home/omer/RiderProjects/D_Project/D_Project/wwwroot/js/site.js",

@@ -3,6 +3,7 @@ using System;
 using D_Project.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace D_Project.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241014204638_AddModelsProductSubCatsRelation")]
+    partial class AddModelsProductSubCatsRelation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -118,57 +121,6 @@ namespace D_Project.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("MainCategory");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("760f7733-7179-4331-b547-d0d543c404d8"),
-                            Description = "Apparel and accessories",
-                            Icon = "wwwroot/images/mainCategories/category.jpg",
-                            Name = "Clothing"
-                        },
-                        new
-                        {
-                            Id = new Guid("61468241-641e-4146-a7be-4b15b7ee338b"),
-                            Description = "Every day house hold items",
-                            Icon = "wwwroot/images/mainCategories/category.jpg",
-                            Name = "Household Items"
-                        },
-                        new
-                        {
-                            Id = new Guid("dd9b40e5-3af8-495a-8e89-974949f4f51f"),
-                            Description = "Electronics",
-                            Icon = "wwwroot/images/mainCategories/category.jpg",
-                            Name = "Electronics"
-                        },
-                        new
-                        {
-                            Id = new Guid("f573225d-2181-4083-8a2a-8a4317b3fca9"),
-                            Description = "Donate your books or medias.",
-                            Icon = "wwwroot/images/mainCategories/category.jpg",
-                            Name = "Books and Media"
-                        },
-                        new
-                        {
-                            Id = new Guid("8638f166-0389-409a-88ef-c7d26389da75"),
-                            Description = "Donate your Toys and Games.",
-                            Icon = "wwwroot/images/mainCategories/category.jpg",
-                            Name = "Toys and Games"
-                        },
-                        new
-                        {
-                            Id = new Guid("dc48daff-cd3d-477d-a21e-52c830b61006"),
-                            Description = "Donate your sport or fitness equipment.",
-                            Icon = "wwwroot/images/mainCategories/category.jpg",
-                            Name = "Sports of Fitness Equipment"
-                        },
-                        new
-                        {
-                            Id = new Guid("d413b22e-7fcd-4978-adc1-8c32406695a0"),
-                            Description = "Donate your food and groceries.",
-                            Icon = "wwwroot/images/mainCategories/category.jpg",
-                            Name = "Food and Groceries"
-                        });
                 });
 
             modelBuilder.Entity("D_Project.Models.Product", b =>
@@ -239,19 +191,19 @@ namespace D_Project.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "61a513ae-58e7-44b9-83ed-bb74b4d5f103",
+                            Id = "633a6744-d770-4e0b-ada9-209c4c5785e1",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "5744c482-4977-4167-aee4-df2edfcd8b82",
+                            Id = "21d9762a-8110-4b4b-bf50-c0e156edfe37",
                             Name = "Client",
                             NormalizedName = "CLIENT"
                         },
                         new
                         {
-                            Id = "70351cba-1cd5-49a5-9857-f1793a895a63",
+                            Id = "7da8e03f-f9e5-47a6-aac8-e5e44a0d95bb",
                             Name = "Donator",
                             NormalizedName = "DONATOR"
                         });
@@ -410,226 +362,226 @@ namespace D_Project.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("5691d3de-7a07-4afb-a303-e18da5d2133b"),
+                            Id = new Guid("638125bf-9101-409f-9430-b1e89e2172d8"),
                             Description = "Apparel for men",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("760f7733-7179-4331-b547-d0d543c404d8"),
+                            MainCategoryId = new Guid("d06cb356-7dbc-4514-8b09-b2d4fbfb51fc"),
                             Name = "Men's Clothing"
                         },
                         new
                         {
-                            Id = new Guid("af52bd61-4722-49db-993f-6a92d61f56bb"),
+                            Id = new Guid("1e72e900-8bdb-4b38-8bbb-4b0399916ebd"),
                             Description = "Apparel for women",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("760f7733-7179-4331-b547-d0d543c404d8"),
+                            MainCategoryId = new Guid("d06cb356-7dbc-4514-8b09-b2d4fbfb51fc"),
                             Name = "Women's Clothing"
                         },
                         new
                         {
-                            Id = new Guid("1fdb90bf-a0f2-4468-b44b-6f6fa5299a31"),
+                            Id = new Guid("e167da48-5302-457d-b333-b0971d2ce9ed"),
                             Description = "Apparel for children",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("760f7733-7179-4331-b547-d0d543c404d8"),
+                            MainCategoryId = new Guid("d06cb356-7dbc-4514-8b09-b2d4fbfb51fc"),
                             Name = "Children's Clothing"
                         },
                         new
                         {
-                            Id = new Guid("0ddc2c2d-ee9c-43f0-a6ae-87fbe049c6cf"),
+                            Id = new Guid("dbccfe0c-101e-46e3-b30b-9e02c5024946"),
                             Description = "Footwear for all",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("760f7733-7179-4331-b547-d0d543c404d8"),
+                            MainCategoryId = new Guid("d06cb356-7dbc-4514-8b09-b2d4fbfb51fc"),
                             Name = "Shoes & Footwear"
                         },
                         new
                         {
-                            Id = new Guid("4196a922-1e7d-432a-a4e2-cc20bfd31104"),
+                            Id = new Guid("178c3b72-8bb9-4533-8eb8-f5199d26d7c3"),
                             Description = "Hats, scarves, belts, etc.",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("760f7733-7179-4331-b547-d0d543c404d8"),
+                            MainCategoryId = new Guid("d06cb356-7dbc-4514-8b09-b2d4fbfb51fc"),
                             Name = "Accessories"
                         },
                         new
                         {
-                            Id = new Guid("b1d2f97e-7b70-4223-b400-568cc138cee8"),
+                            Id = new Guid("4cab9944-7813-4d43-b397-9b54305cf2bc"),
                             Description = "Household furniture",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("61468241-641e-4146-a7be-4b15b7ee338b"),
+                            MainCategoryId = new Guid("be2579fe-816c-40b3-bd01-be5f9c9063ef"),
                             Name = "Furniture"
                         },
                         new
                         {
-                            Id = new Guid("5ad0a04f-9eaf-4ba6-8ee5-1bd9453a1961"),
+                            Id = new Guid("31f8ec51-bbaf-4c8a-90cc-2f6f93d19045"),
                             Description = "Utensils and appliances for the kitchen",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("61468241-641e-4146-a7be-4b15b7ee338b"),
+                            MainCategoryId = new Guid("be2579fe-816c-40b3-bd01-be5f9c9063ef"),
                             Name = "Kitchenware"
                         },
                         new
                         {
-                            Id = new Guid("bbe1c35d-3299-408e-b228-2b13bdbc6582"),
+                            Id = new Guid("3f155ddb-dce1-4214-adde-17077f66af43"),
                             Description = "Bedding essentials",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("61468241-641e-4146-a7be-4b15b7ee338b"),
+                            MainCategoryId = new Guid("be2579fe-816c-40b3-bd01-be5f9c9063ef"),
                             Name = "Bedding & Linens"
                         },
                         new
                         {
-                            Id = new Guid("6995368a-c749-48ea-87c3-6c6f84b4a708"),
+                            Id = new Guid("b9502c53-a152-4b36-9541-e7f498f5feec"),
                             Description = "Cleaning essentials",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("61468241-641e-4146-a7be-4b15b7ee338b"),
+                            MainCategoryId = new Guid("be2579fe-816c-40b3-bd01-be5f9c9063ef"),
                             Name = "Cleaning Supplies"
                         },
                         new
                         {
-                            Id = new Guid("7b5872f9-cceb-4584-bb84-3bd0ec4a1d74"),
+                            Id = new Guid("3919d812-af91-40b6-be97-98ad61beaa8b"),
                             Description = "Decorative items for the home",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("61468241-641e-4146-a7be-4b15b7ee338b"),
+                            MainCategoryId = new Guid("be2579fe-816c-40b3-bd01-be5f9c9063ef"),
                             Name = "Home Décor"
                         },
                         new
                         {
-                            Id = new Guid("67412f37-685a-4394-8e2d-3d802b743ecd"),
+                            Id = new Guid("5e806561-87e5-4fd0-ac25-25e2aeb3062e"),
                             Description = "Computers and laptops",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("dd9b40e5-3af8-495a-8e89-974949f4f51f"),
+                            MainCategoryId = new Guid("68ce9515-3997-4c7a-9963-cd4b19b1a9fd"),
                             Name = "Computers & Laptops"
                         },
                         new
                         {
-                            Id = new Guid("afe15908-a50f-435b-a3e1-b48275c1c256"),
+                            Id = new Guid("28e54862-25b6-4500-946d-451f0bd6ee65"),
                             Description = "Smartphones and tablets",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("dd9b40e5-3af8-495a-8e89-974949f4f51f"),
+                            MainCategoryId = new Guid("68ce9515-3997-4c7a-9963-cd4b19b1a9fd"),
                             Name = "Mobile Phones & Tablets"
                         },
                         new
                         {
-                            Id = new Guid("a991cf5d-712d-43dd-a2f6-49ec2db08b9d"),
+                            Id = new Guid("9012e5b7-9e80-4c3e-9954-e04c137de387"),
                             Description = "Appliances for home use",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("dd9b40e5-3af8-495a-8e89-974949f4f51f"),
+                            MainCategoryId = new Guid("68ce9515-3997-4c7a-9963-cd4b19b1a9fd"),
                             Name = "Home Appliances"
                         },
                         new
                         {
-                            Id = new Guid("f7d9ae3f-8fa5-4b18-ba8d-a7718738c18f"),
+                            Id = new Guid("50e30ee0-d66b-4759-8b86-60ac7e14a46a"),
                             Description = "Televisions and audio equipment",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("dd9b40e5-3af8-495a-8e89-974949f4f51f"),
+                            MainCategoryId = new Guid("68ce9515-3997-4c7a-9963-cd4b19b1a9fd"),
                             Name = "TVs & Audio Systems"
                         },
                         new
                         {
-                            Id = new Guid("48e2afba-1eee-4612-b70e-3e9ade302439"),
+                            Id = new Guid("8142fb3b-785d-4fa8-a547-8f948459393d"),
                             Description = "Fiction, non-fiction, educational",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("f573225d-2181-4083-8a2a-8a4317b3fca9"),
+                            MainCategoryId = new Guid("05914267-4605-45f5-82b3-ba2bf084955e"),
                             Name = "Books"
                         },
                         new
                         {
-                            Id = new Guid("44c1366e-7c0c-45c4-917d-d124016f6a4e"),
+                            Id = new Guid("df023da7-e15d-4444-a14c-34e0c4255931"),
                             Description = "Various magazines",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("f573225d-2181-4083-8a2a-8a4317b3fca9"),
+                            MainCategoryId = new Guid("05914267-4605-45f5-82b3-ba2bf084955e"),
                             Name = "Magazines"
                         },
                         new
                         {
-                            Id = new Guid("fdd80bdf-e15c-4658-a851-32770b8e3c88"),
+                            Id = new Guid("07ff0b73-c7c0-4c00-b39d-b342ab005d4c"),
                             Description = "Media collection",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("f573225d-2181-4083-8a2a-8a4317b3fca9"),
+                            MainCategoryId = new Guid("05914267-4605-45f5-82b3-ba2bf084955e"),
                             Name = "CDs, DVDs, Blu-rays"
                         },
                         new
                         {
-                            Id = new Guid("e7ee9b9c-bb31-4cfc-8b9e-b005754c681a"),
+                            Id = new Guid("e48f8aec-e1b1-40d1-94a5-0eaf3f615647"),
                             Description = "Games for fun and challenges",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("8638f166-0389-409a-88ef-c7d26389da75"),
+                            MainCategoryId = new Guid("b508421a-ac57-47fe-92a1-e9e839fde9f8"),
                             Name = "Board Games & Puzzles"
                         },
                         new
                         {
-                            Id = new Guid("464c608f-d435-4c24-b1bf-2e2b0f066e77"),
+                            Id = new Guid("fdf27400-6d7a-4bff-b933-5341003e37c4"),
                             Description = "Toys for young children",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("8638f166-0389-409a-88ef-c7d26389da75"),
+                            MainCategoryId = new Guid("b508421a-ac57-47fe-92a1-e9e839fde9f8"),
                             Name = "Baby & Toddler Toys"
                         },
                         new
                         {
-                            Id = new Guid("ee52126a-dc5c-41cb-9977-e2744ee3199f"),
+                            Id = new Guid("ccd09a85-97f5-45da-a606-03e693411da0"),
                             Description = "Toys that promote learning",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("8638f166-0389-409a-88ef-c7d26389da75"),
+                            MainCategoryId = new Guid("b508421a-ac57-47fe-92a1-e9e839fde9f8"),
                             Name = "Educational Toys"
                         },
                         new
                         {
-                            Id = new Guid("42a3bde9-4f4e-4547-832f-2f34dd2c53e8"),
+                            Id = new Guid("14c57dc1-8c52-46b3-a9d1-62fc7b38a220"),
                             Description = "Gaming systems and games",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("8638f166-0389-409a-88ef-c7d26389da75"),
+                            MainCategoryId = new Guid("b508421a-ac57-47fe-92a1-e9e839fde9f8"),
                             Name = "Video Games & Consoles"
                         },
                         new
                         {
-                            Id = new Guid("05344845-cb56-4d17-8f6a-81dbb3f64cf4"),
+                            Id = new Guid("5f3e00f5-932c-4785-b163-1aebd1b04a44"),
                             Description = "Equipment for gym workouts",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("dc48daff-cd3d-477d-a21e-52c830b61006"),
+                            MainCategoryId = new Guid("c15893da-2b58-479f-8ae9-d93b7f156d5b"),
                             Name = "Gym Equipment"
                         },
                         new
                         {
-                            Id = new Guid("7c86f696-e777-45bc-be6a-a3e3ad30d82d"),
+                            Id = new Guid("5c443965-6991-458f-af1e-13ca6a10ad2a"),
                             Description = "Gear for various sports",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("dc48daff-cd3d-477d-a21e-52c830b61006"),
+                            MainCategoryId = new Guid("c15893da-2b58-479f-8ae9-d93b7f156d5b"),
                             Name = "Sports Gear"
                         },
                         new
                         {
-                            Id = new Guid("df26de71-c0ed-4710-bbf9-115bdfddc99f"),
+                            Id = new Guid("8f2a575c-04ee-4529-9123-ffeb61051de6"),
                             Description = "Bicycles and scooters for all ages",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("dc48daff-cd3d-477d-a21e-52c830b61006"),
+                            MainCategoryId = new Guid("c15893da-2b58-479f-8ae9-d93b7f156d5b"),
                             Name = "Bicycles & Scooters"
                         },
                         new
                         {
-                            Id = new Guid("ae2814e3-953c-4333-8089-3cb0ae9dc5dc"),
+                            Id = new Guid("89f9518b-0ff8-498e-ab56-089d7dfb3b68"),
                             Description = "Equipment for outdoor activities",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("dc48daff-cd3d-477d-a21e-52c830b61006"),
+                            MainCategoryId = new Guid("c15893da-2b58-479f-8ae9-d93b7f156d5b"),
                             Name = "Camping & Outdoor Gear"
                         },
                         new
                         {
-                            Id = new Guid("aba87aea-2bf6-4341-ac5f-5a572fa9cee8"),
+                            Id = new Guid("db17c983-3326-4b48-b5ff-0d80bef47d36"),
                             Description = "Canned food items",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("d413b22e-7fcd-4978-adc1-8c32406695a0"),
+                            MainCategoryId = new Guid("1dcd7648-fbae-4302-8ef7-c84dae621879"),
                             Name = "Canned Goods"
                         },
                         new
                         {
-                            Id = new Guid("131e6f0d-098a-417e-a86e-dd479b62c638"),
+                            Id = new Guid("7c2c8373-4884-4f06-9e3c-4530cc7cd990"),
                             Description = "Non-perishable food products",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("d413b22e-7fcd-4978-adc1-8c32406695a0"),
+                            MainCategoryId = new Guid("1dcd7648-fbae-4302-8ef7-c84dae621879"),
                             Name = "Non-Perishable Items"
                         },
                         new
                         {
-                            Id = new Guid("abd616ce-a2dd-49ed-b0f3-0691bc680491"),
+                            Id = new Guid("f7b96a76-c589-499a-9ef7-9ffc2b53b73d"),
                             Description = "Food and formula for infants",
                             Icon = "wwwroot/images/mainCategories/category.jpg",
-                            MainCategoryId = new Guid("d413b22e-7fcd-4978-adc1-8c32406695a0"),
+                            MainCategoryId = new Guid("1dcd7648-fbae-4302-8ef7-c84dae621879"),
                             Name = "Baby Food & Formula"
                         });
                 });
